@@ -1,0 +1,83 @@
+<head>
+  <meta charset="utf-8">
+<style>
+div.transbox p {
+    margin: 3%;
+    font-weight: bold;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+    color: darkred;
+    background-color: transparent;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:active {
+    color: darkred;
+    background-color: transparent;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    body {
+    background-image: url("soccer-stadium-11840.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:black;
+    
+}
+        p {
+    font-size: 20px;
+}
+h1 {
+    color: black;
+    text-align:center;
+   
+}
+h2 {
+    color: whitesmoke;
+   text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+    
+
+th {
+    border: 1px solid black;
+    font-size:140%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  td {
+      border: 1px solid black;
+      text-align: center;
+      color:black;
+      font-size:100%;
+}  
+img {
+    display: block;
+    margin: 0 auto;
+}
+</style>
+</head>
