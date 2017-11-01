@@ -18,8 +18,38 @@
   <li><a href="Balls.htm">Balls</a></li>
     <li><a href="shoes.htm">Cleats</a></li>
   <li><a class="active" href="ContactUs.htm">Contact us</a></li>
- 
-</ul>
+       </ul>
+    <script>
+function validateForm(myForm){
+
+var x=document.forms["myForm"]["fname"].value;
+if (x==null || x=="")
+  {
+  alert("First name must be entered");
+  return false;
+  }
+
+var y=document.forms["myForm"]["lname"].value;
+  {
+if (y==null || y=="")
+  alert("Last name must be entered");
+  return false;
+  }
+    var z=document.forms["myForm"]["email"].value;
+  {
+if (z==null || z=="")
+  alert("Email address must be entered");
+  return false;
+  }
+    var k=document.forms["myForm"]["comment"].value;
+    {
+if (k==null || k=="")
+  alert("Comment in the box below");
+  return false;
+  }
+}
+          console.log(c);
+</script>
 </head>
     
 <div class="content">
@@ -28,29 +58,43 @@
 <body>
 <p style=";color:black;"> Give us a feedback of your experiance with our store, we will reply to you via E-mail as soon as possible!<br> Thank you !</p>
    
-<form action=" "; method="post"; style="text-align:center; color:black;">
+<form name="myForm" action=" " style="text-align:center; color:black;" onsubmit="return validateForm()" method="post">
   <fieldset>
     
     <legend>Customer Information:</legend>
+
     First name:<br>
-    <input type="text" name="firstname"><br>
+    <input type="text" name="fname"><br>
+    
+    
     Last name:<br>
-    <input type="text" name="lastname"><br>
-      E-mail Address:<br>
-      <input type="text" name="Email"><br><Br>
+    <input type="text" name="lname"><br>
+      
+      Email Address:<br>
+      <input type="text" name="email"><br><Br>
        
       <select name="Choices">
     <option value="Question">Question</option>
     <option value="Problem">Problem</option>
     <option value="Order status update">Order status update</option>
   </select><Br><BR>
-<textarea name="Comment:" rows="10" cols="50">
+        
+Comment:<br>
+<textarea name="comment" rows="10" cols="50">
 
-</textarea><BR><BR>
+</textarea><BR><BR>   
     <input type="Reset" value="Reset">
       <input type="submit" value="Submit">
   </fieldset>
-</form>
+</form> 
+      <p>Today is: <br> </p>
+      <p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+      
 </body>
 </div>
 </html>
