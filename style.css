@@ -20,34 +20,67 @@ div.transbox p {
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    height: 400px;
-    position: absolute;
-    width: 200px;
+.navbar {
+    overflow: hidden;
     background-color: #333;
-
+    font-family: Arial;
 }
 
-li a {
-    display: block;
+.navbar a {
+    float: left;
+    font-size: 16px;
     color: white;
-    padding: 8px 16px;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
 
-.active {
-    background-color: darkred;
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 .content {
     float: center;
-    margin-left: 225px;
+    margin-left: 100px;
     position: absolute;
     width: 80%;
     height: auto;

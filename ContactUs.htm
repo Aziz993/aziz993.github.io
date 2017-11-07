@@ -13,12 +13,34 @@
         <h1>Contact Us</h1>
     </div>
     <br>
-   <ul>
-  <li><a href="index.htm">Home</a></li>
-  <li><a href="Balls.htm">Balls</a></li>
-    <li><a href="shoes.htm">Cleats</a></li>
-  <li><a class="active" href="ContactUs.htm">Contact us</a></li>
-       </ul>
+    <div class="navbar">
+  <a href="index.htm">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Products
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="Balls.htm">Balls</a>
+      <a href="shoes.htm">Cleats</a>
+    </div>
+  </div>
+    <a href="ContactUs.htm">Contact Us</a>
+</div>
+    <script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+    </script>
     <script>
 function validateForm(myForm){
 
@@ -52,11 +74,13 @@ if (k==null || k=="")
 </script>
 </head>
     
-<div class="content">
-  
 
+  
+<div class="content">
 <body>
-<p style=";color:black;"> Give us a feedback of your experiance with our store, we will reply to you via E-mail as soon as possible!<br> Thank you !</p>
+<p style=";color:black;" text-align= center;> Give us a feedback of your experiance with our store, we will reply to you via E-mail as soon as possible!<br> Thank you !</p>
+    
+    
    
 <form name="myForm" action=" " style="text-align:center; color:black;" onsubmit="return validateForm()" method="post">
   <fieldset>
@@ -94,7 +118,7 @@ Comment:<br>
 var d = new Date();
 document.getElementById("demo").innerHTML = d.toDateString();
 </script>
-      
-</body>
 </div>
+</body>
+     
 </html>
