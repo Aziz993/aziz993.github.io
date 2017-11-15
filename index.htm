@@ -48,10 +48,77 @@ window.onclick = function(e) {
 <body>
  <div class="content">
     <p style="color: black;"><strong>We are a soccer store that provides all equipments for the game of soccer ! including shoes, shorts, shirts, balls, goals and all the stuff you need to train, to confront the opponent!<br> Come to our store, and get everything you need!</strong></p>
+
+     <br>
   
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+    <br><br>
+  
+  <img src="purecontrola.jpg" style="width:100%">
+  <div class="text">Adidas Purecontrol</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://www.uefa.com/MultimediaFiles/Photo/competitions/General/02/44/03/37/2440337_w1.jpg" style="width:100%">
+  <div class="text">UCL 2017 Final Match Ball</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://footballsale.ru/images/nike%20ordem.jpg" style="width:100%">
+  <div class="text">Nike Ordem 3</div>
+</div>
+    <div class="mySlides fade">
+  
+  <img src="nike-Mercurial-Superfly.jpg" style="width:100%">
+  <div class="text">Nike Mercurial Superfly</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
 <br>
 
-    <img src="http://www.soccerstop.com/media/images/soccerplayer.png" alt="A ball and shoes" style="width:487px;height:244px;">
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
         <p>Today is: <br> </p>
       <p id="demo"></p>
 
@@ -59,7 +126,7 @@ window.onclick = function(e) {
 var d = new Date();
 document.getElementById("demo").innerHTML = d.toDateString();
 </script>
-    </div>
+            </div>
     </body>
     </div>
  
